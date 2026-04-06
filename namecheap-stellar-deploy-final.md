@@ -597,7 +597,10 @@ ssh yourusername@yoursite.com -p 21098
 # Deploy after a git push
 bash ~/deploy.sh
 
-# Copy only the build folder manually
+# Remove existing build folder
+rm -rf ~/public_html/build
+
+# Copy new build folder
 cp -r ~/laravel/public/build ~/public_html/
 
 # View live error logs
